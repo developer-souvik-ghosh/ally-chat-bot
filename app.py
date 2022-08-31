@@ -17,5 +17,10 @@ def aaaaaaa():
     return render_template("voice_to_text.html")
 
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return "404 Error (Page not found)"
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
